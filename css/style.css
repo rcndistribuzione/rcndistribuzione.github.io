@@ -21,22 +21,26 @@ body {
   background-color: #EEE;
 }
 
-.carousel {
-    font-family: "Allura","Helvetica Neue",Helvetica,Arial, serif;
+.carousel, .jumbotron {
+  font-family: "Allura","Helvetica Neue",Helvetica,Arial, serif;
+}
+
+.jumbotron {
+    padding: 16px 32px !important;
 }
 
 .carousel-caption {
-    color: #FFF;
-    right: 0;
-    left: 0;
-    text-align: center;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+  color: #FFF;
+  right: 0;
+  left: 0;
+  text-align: center;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
 }
 
 @media (min-width:1200px){
-	.container{
-		width:970px
-	}
+  .container{
+    width:970px
+  }
 }
 
 .footer {
@@ -53,4 +57,8 @@ body {
 .big-e {
   display: inline;
   padding-right : 4px;
+}
+
+.product {
+  padding: 8px 16px;
 }
