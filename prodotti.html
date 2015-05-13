@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="rcn">
 <head>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
@@ -29,212 +29,12 @@
       rispettando il ciclo del freddo, allo scopo di fornire il prodotto inalterato al consumatore.</h2>
     </div>
 
-    <div class="row">
-      <div class="col-lg-3 product">
+    <div class="row" ng-controller="ProductController as productCtrl">
+      <div class="col-lg-3 col-md-4 col-sm-6 product" ng-repeat="product in productCtrl.products">
         <div class="text-center">
-          <img class="img-rounded" src="images/products/aversana.jpg" alt="Aversana" height="140" width="140">
+          <img class="img-rounded" ng-src="{{product.image}}" alt="{{product.name}}" height="140" width="140">
         </div>
-        <h4 class="text-center">Aversana</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/bocconcini.jpg" alt="Bocconcini" height="140" width="140">
-        </div>
-        <h4 class="text-center">Bocconcini</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/burrata.jpg" alt="Burrata" height="140" width="140">
-        </div>
-        <h4 class="text-center">Burrata</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/fiordilatte.jpg" alt="Fior di latte" height="140" width="140">
-        </div>
-        <h4 class="text-center">Fior di latte</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/provola.jpg" alt="Provola affumicata" height="140" width="140">
-        </div>
-        <h4 class="text-center">Provola affumicata</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/ricotta_bufala.jpg" alt="Ricotta di bufala" height="140" width="140">
-        </div>
-        <h4 class="text-center">Ricotta di bufala</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/ricotta_mucca.jpg" alt="Ricotta di mucca" height="140" width="140">
-        </div>
-        <h4 class="text-center">Ricotta di mucca</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/treccia.jpg" alt="Treccia" height="140" width="140">
-        </div>
-        <h4 class="text-center">Treccia</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/scamorza_bianca.jpg" alt="Scamorza bianca" height="140" width="140">
-        </div>
-        <h4 class="text-center">Scamorza bianca</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/scamorza_affumicata.jpg" alt="Scamorza affumicata" height="140" width="140">
-        </div>
-        <h4 class="text-center">Scamorza affumicata</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/primo_sale.jpg" alt="Primo sale" height="140" width="140">
-        </div>
-        <h4 class="text-center">Primo sale</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/cannolo.jpg" alt="Cannolo" height="140" width="140">
-        </div>
-        <h4 class="text-center">Cannolo</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/capricciosa.jpg" alt="Capricciosa" height="140" width="140">
-        </div>
-        <h4 class="text-center">Capricciosa</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/ciambella.jpg" alt="Ciambella" height="140" width="140">
-        </div>
-        <h4 class="text-center">Ciambella</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/filone.jpg" alt="Filone" height="140" width="140">
-        </div>
-        <h4 class="text-center">Filone</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/rolle.jpg" alt="Rolle" height="140" width="140">
-        </div>
-        <h4 class="text-center">Rolle</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/saccottino.jpg" alt="Saccottino" height="140" width="140">
-        </div>
-        <h4 class="text-center">Saccottino</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/saccottino_con_laccetto.jpg" alt="Saccottino con laccetto" height="140" width="140">
-        </div>
-        <h4 class="text-center">Saccottino con laccetto</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/treccione.jpg" alt="Treccione" height="140" width="140">
-        </div>
-        <h4 class="text-center">Treccione</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/acellica.jpg" alt="Acellica" height="140" width="140">
-        </div>
-        <h4 class="text-center">Acellica</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/caciocavallo.jpg" alt="Caciocavallo" height="140" width="140">
-        </div>
-        <h4 class="text-center">Caciocavallo</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/caciocavallo_al_tartufo.jpg" alt="Caciocavallo al tartufo" height="140" width="140">
-        </div>
-        <h4 class="text-center">Caciocavallo al tartufo</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/caciotta_farcita.jpg" alt="Caciotta farcita" height="140" width="140">
-        </div>
-        <h4 class="text-center">Caciotta farcita</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/caciotta_semplice.jpg" alt="Caciotta semplice" height="140" width="140">
-        </div>
-        <h4 class="text-center">Caciotta semplice</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/formaggio_affumicato.jpg" alt="Formaggio affumicato" height="140" width="140">
-        </div>
-        <h4 class="text-center">Formaggio affumicato</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/formaggio_al_tartufo.jpg" alt="Formaggio al tartufo" height="140" width="140">
-        </div>
-        <h4 class="text-center">Formaggio al tartufo</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
-      </div>
-      <div class="col-lg-3 product">
-        <div class="text-center">
-          <img class="img-rounded" src="images/products/marmellata.jpg" alt="Marmellata" height="140" width="140">
-        </div>
-        <h4 class="text-center">Marmellata</h4>
+        <h4 class="text-center">{{product.name}}</h4>
         <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
       </div>
     </div>
@@ -243,6 +43,8 @@
       <p>© RCN Distribuzione 2015</p>
     </footer>
   </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="js/rcn.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
