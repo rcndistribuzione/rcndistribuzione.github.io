@@ -36,7 +36,25 @@
           <img class="img-rounded" ng-src="{{product.image}}" alt="{{product.name}}" height="140" width="140">
         </div>
         <h4 class="text-center">{{product.name}}</h4>
-        <p class="text-center"><a class="btn btn-default" href="#" role="button">Dettagli »</a></p>
+        <p class="text-center"><a ng-click="productCtrl.setCurrent($index)" data-toggle="modal" data-target="#descriptionModal" class="btn btn-default" href="#" role="button">Dettagli »</a></p>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="descriptionModal" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body row">
+              <div class="col-lg-4 col-md-4 col-sm-4 text-center">
+                <img class="img-rounded" ng-src="{{productCtrl.currentProduct.image}}" alt="{{productCtrl.currentProduct.name}}" height="140" width="140">
+              </div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">{{productCtrl.currentProduct.name}}</h4>
+                <p>{{productCtrl.currentProduct.description}}<p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
